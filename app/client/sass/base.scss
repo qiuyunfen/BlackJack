@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/* 重置浏览器样式 */
+html{
+    height: 100%;
+    background-color: #ffffff;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+body{
+    _zoom:1;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset, img {
+    border: 0;
+}
+address, caption, cite, code, dfn, em, var {
+    font-style: normal;
+    font-weight: normal;
+}
+ul li {
+    list-style: none;
+}
+ol li {
+    list-style: decimal;
+    list-style-position: inside;
+}
+caption, th {
+    text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+q:before, q:after {
+    content: '';
+}
+abbr, acronym {
+    border: 0;
+    font-variant: normal;
+}
+sup {
+    vertical-align: text-top;
+}
+sub {
+    vertical-align: text-bottom;
+}
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+input, textarea, select {
+    *font-size: 100%;
+    outline: none;
+    padding: 5px;
+    resize: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}   
+legend {
+    color: #000;
+}
+body {
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-size: 14px;
+}

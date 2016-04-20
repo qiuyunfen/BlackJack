@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>WebSocket Demo</title>
+    <link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head>
+
+<body>
+	<div id="content" class="page game">
+		<div id="wapper" class="wapper">
+			<div class="info">
+				<div id="ready" class="btn ready-btn">准备</div>
+				<h1>西南科技大学</h1>
+				<p>邱运芬</p>
+			</div>
+		</div>
+		<div id="result" class="wapper" style="display: none">
+			<div class="info">
+				<h1 id="winner"></h1>
+				<div id="nextGame" class="btn next-btn">再来一局</div>
+			</div>
+		</div>
+		
+		<div id="pokers" class="item pokers"></div>
+		<div id="myPoker" class="item myPoker clearfix"></div>
+	</button>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/assets/bundle.js"></script>
+</body>
+</html>

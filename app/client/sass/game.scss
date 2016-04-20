@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+$color: #ffff99; 
+$fontSize: .8rem;
+
+@mixin position($type, $top, $right, $bottom, $left) {
+	position: $type;
+    top: $top;
+    left: $right;
+    right: $bottom;
+    bottom: $left;
+}
+
+body {
+	background: #ddd;
+	color: #fff;
+}
+
+.page {
+	height: 100%;
+	width: 16rem;
+	margin: 0 auto;
+    border: 1px solid #ddd;
+    @include position(absolute, 0, 0, 0 ,0);
+}
+
+.game {
+	background: url('../img/table.png');
+	.wapper {
+		height: 100%;
+		background: #000;
+		filter: alpha(opacity=60); 
+		-moz-opacity: 0.6; 
+		opacity: 0.6;
+		z-index: 100;
+		@include position(absolute, 0, 0, 0 ,0);
+		.info {
+			position: relative;
+			top: 40%;
+			font-size: $fontSize;
+			text-align: center;
+			color: $color;
+			h1, p {
+				margin-top: .4rem;
+			}
+		}
+		.ready-btn {
+			margin: 0 5$fontSize;
+			width: 4rem;
+			height: 2rem;
+			line-height: 2rem;
+		}
+		.next-btn {
+			margin-top: .5rem;
+		}
+	}
+	.player {
+		margin-top: 1rem;
+	}
+	.current-gamer {
+		color: $color;
+	}
+	.item {
+		width: 12rem;
+		margin: 0 2rem;
+		font-size: $fontSize;
+	}
+	.pokers {
+		margin-top:1rem;
+		.poker {
+			margin-left: -0.875rem;
+		}
+		.poker:first-child {
+			margin-left: .125rem;
+		}
+	}
+	.myPoker { 
+		position: absolute;
+		bottom: 2rem;
+		.poker {
+			margin-left: -0.875rem;
+		}
+		.poker:first-child {
+			margin-left: .125rem;
+		}
+		.btns {
+			text-align: center;
+			.btn {
+				font-size: $fontSize;
+				height: 1.3rem;
+				line-height: 1.3rem;
+				margin-top: .125rem;
+				margin-left: .125rem;
+			}
+			.btns:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+
+

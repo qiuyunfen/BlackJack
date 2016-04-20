@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/*'spade', 'heart', 'diamond', 'club',//黑桃,红桃,方块,梅花*/
+
+@mixin poker($x, $y, $size, $w, $h) {
+	background: url('../img/pokers2.png') no-repeat $x $y;
+	background-size: $size;
+	width: $w;
+	height: $h;
+}
+
+$color-list: club, diamond, heart, spade;
+$number-list: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K;
+
+$i: 0;
+@each $color in $color-list {
+	$j: 0;
+	@each $number in $number-list {
+	  	.#{$color}-#{$number}-poker {
+	  		@include poker(-$j * 1.925rem + .025rem, -$i * 2.8rem + .025rem, 25rem, 1.95rem, 2.825rem);
+	  	}
+	  	$j: $j + 1;
+	}
+	$i: $i + 1;
+}
+
+.poker-back {
+	@include poker(-3.85rem, -11.2rem, 25.125rem, 1.95rem, 2.825rem);
+}
+
+.bust {
+	background: url('../img/bust.png') no-repeat 0rem 0rem;
+	background-size: 2.5rem;
+	width: 2.95rem;
+	height: 2.5rem;
+	position: relative;
+	top: 20%;
+}
+

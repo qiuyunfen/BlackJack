@@ -1,0 +1,16 @@
+diff a/app/server/serverOp.js b/app/server/serverOp.js	(rejected hunks)
+@@ -171,9 +171,14 @@
+ 
+ 					socket.emit('connection', gamer);
+ 					io.emit('new Gamer', game);
++				} else {
++					gamer = game.join(socket, game.others);
++
++					socket.emit('outof limit', gamer);
+ 				}
+ 			} else {
+ 				gamer = game.join(socket, game.others);
++
+ 				socket.emit('not Start', gamer);
+ 			}
+ 
